@@ -10,37 +10,37 @@ commit-message-incrementing: Enabled
 
 branches:
   main:
-    regex: ^main$|^master$
+    regex: '^main$|^master$'
     mode: ContinuousDelivery
     label: ''
     increment: Patch
     prevent-increment: false
   develop:
-    regex: ^develop$|^dev$
+    regex: '^develop$|^dev$'
     mode: ContinuousDelivery
     label: alpha
     increment: Minor
     prevent-increment: false
   release:
-    regex: ^releases?[/-]
+    regex: '^releases?[/-]'
     mode: ContinuousDelivery
     label: ''
     increment: None
     prevent-increment: true
   feature:
-    regex: ^features?[/-]
+    regex: '^features?[/-]'
     mode: ContinuousDelivery
     label: useBranchName
     increment: Inherit
     prevent-increment: false
   pull-request:
-    regex: ^(pull|pull\-requests|pr)[/-]
+    regex: '^(pull|pull\-requests|pr)[/-]'
     mode: ContinuousDelivery
     label: PullRequest
     increment: Inherit
     prevent-increment: false
   hotfix:
-    regex: ^hotfix(es)?[/-]
+    regex: '^hotfix(es)?[/-]'
     mode: ContinuousDelivery
     label: beta
     increment: Patch
@@ -50,4 +50,4 @@ ignore:
   sha: []
 
 merge-message-formats:
-  tfs: '^Merged PR (?<PullRequestNumber>\d+)' 
+  tfs: '^Merged PR (?<PullRequestNumber>\d+)'
